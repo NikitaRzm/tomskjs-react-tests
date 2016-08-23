@@ -4,7 +4,7 @@
   "description": "TomskJS React unint-tests example project for lecture",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,36 @@
   "bugs": {
     "url": "https://github.com/NikitaRzm/tomskjs-react-tests/issues"
   },
-  "homepage": "https://github.com/NikitaRzm/tomskjs-react-tests#readme"
+  "homepage": "https://github.com/NikitaRzm/tomskjs-react-tests#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-regenerator": "^6.11.4",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
+    "json-loader": "^0.5.4",
+    "karma": "^1.2.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.1.0",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.8.0",
+    "mocha": "^3.0.2",
+    "promise.prototype.finally": "^2.0.0",
+    "react": "^15.3.1",
+    "react-addons-test-utils": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "webpack": "^1.13.2"
+  }
 }
