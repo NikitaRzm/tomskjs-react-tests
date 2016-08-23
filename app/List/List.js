@@ -1,20 +1,27 @@
 import React, { Component, PropTypes } from 'react';
+import PostItem from '../Item/Item';
 
-export default class List extends Component {
+export default class PostsList extends Component {
   static propTypes = {
-    items: PropTypes.arrayOf(PropTypes.object),
+    items: PropTypes.arrayOf(PropTypes.shape(PostItem.propTypes)),
     onItemClick: PropTypes.func
   };
   
   static defaultProps = {
     items: []
   };
-  
+
   render() {
-    const { items } = this.props;
+    const { items, onItemClick } = this.props;
+
     return (
-      <div>
-        {items.map(item => <div>{item.toString()}</div>)}
+      <div className="posts-list">
+        {
+          items.length ?
+            items.map((item, index) => <PostItem key={index} onClick={onItemClick} {...item} />)
+            :
+            <p>No items</p>
+        }
       </div>
     )
   }

@@ -1,12 +1,12 @@
 // Karma configuration
 
-var webpackConfig = require('./webpack.config');
+const webpackConfig = require('./webpack/tests.config');
 
-module.exports = function(config) {
+module.exports = (config) => {
   config.set({
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['mocha', 'chai', 'sinon'],
     
     client: {
       captureConsole: true,
@@ -72,7 +72,8 @@ module.exports = function(config) {
       "karma-chrome-launcher",
       "karma-webpack",
       "karma-mocha",
-      "karma-chai"
+      "karma-chai",
+      "karma-sinon"
     ],
     
     // Continuous Integration mode

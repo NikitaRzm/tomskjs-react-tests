@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   module: {
@@ -15,7 +15,7 @@ module.exports = {
             'transform-regenerator'
           ]
         },
-        include: path.join(__dirname, 'app'),
+        include: path.join(__dirname, '..', 'app'),
         exclude: /node_modules/
       },
       {test: /\.json$/, loader: 'json-loader'},

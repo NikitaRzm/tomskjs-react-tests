@@ -2,7 +2,7 @@
   "name": "tomskjs-react-tests",
   "version": "1.0.0",
   "description": "TomskJS React unint-tests example project for lecture",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "test": "./node_modules/.bin/karma start karma.conf.js"
   },
@@ -14,6 +14,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NikitaRzm/tomskjs-react-tests/issues"
+  },
+  "engines": {
+    "node": ">=5.1.1"
   },
   "homepage": "https://github.com/NikitaRzm/tomskjs-react-tests#readme",
   "devDependencies": {
@@ -38,6 +41,7 @@
     "karma-mocha": "^1.1.1",
     "karma-mocha-reporter": "^2.1.0",
     "karma-phantomjs-launcher": "^1.0.1",
+    "karma-sinon": "^1.0.5",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
     "mocha": "^3.0.2",
@@ -45,6 +49,7 @@
     "react": "^15.3.1",
     "react-addons-test-utils": "^15.3.1",
     "react-dom": "^15.3.1",
+    "sinon": "^1.17.5",
     "webpack": "^1.13.2"
   }
 }
