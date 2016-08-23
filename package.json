@@ -1,0 +1,19 @@
+{
+  "name": "tomskjs-react-tests",
+  "version": "1.0.0",
+  "description": "TomskJS React unint-tests example project for lecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitaRzm/tomskjs-react-tests.git"
+  },
+  "author": "Nikita Razmakhnin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikitaRzm/tomskjs-react-tests/issues"
+  },
+  "homepage": "https://github.com/NikitaRzm/tomskjs-react-tests#readme"
+}
