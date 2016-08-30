@@ -35,6 +35,7 @@ describe('(Component) Item', () => {
   it('should render each field content of fixture item, if specified', () => {
     const component = shallow(
       <Item
+        id={postFixture.id}
         author={postFixture.author}
         content={postFixture.content}
         date={postFixture.date}
@@ -56,6 +57,7 @@ describe('(Component) Item', () => {
     const onClickSpy = sinon.spy();
     const component = shallow(
       <Item
+        id={postFixture.id}
         author={postFixture.author}
         content={postFixture.content}
         date={postFixture.date}
@@ -67,5 +69,10 @@ describe('(Component) Item', () => {
 
     expect(onClickSpy.calledOnce).to.be.true;
     expect(onClickSpy.firstCall.args[0]).to.deep.equal(postFixture);
-  })
+  });
+  
+  it('should set className to root tag, if passed to props', () => {
+    const component = shallow(<Item className="my-class"/>);
+    expect(component.hasClass('my-class')).to.be.true;
+  });
 });

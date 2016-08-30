@@ -1,4 +1,5 @@
 export const post = {
+  id: 10,
   title: 'Test post',
   author: 'Test author',
   date: '21.01.2016',

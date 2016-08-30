@@ -10,17 +10,37 @@ export default class PostsList extends Component {
   static defaultProps = {
     items: []
   };
+  
+  constructor(props) {
+    super(props);
+    
+    this.state = { selectedItem: {} };
+
+    this.onItemClick = this.onItemClick.bind(this);
+  }
+  
+  onItemClick(item) {
+    const { onItemClick } = this.props;
+    if (onItemClick) onItemClick(item);
+
+    this.setState({ selectedItem: item });
+  }
 
   render() {
-    const { items, onItemClick } = this.props;
+    const { items } = this.props;
+    const { selectedItem } = this.state;
 
     return (
       <div className="posts-list">
         {
           items.length ?
-            items.map((item, index) => <PostItem key={index} onClick={onItemClick} {...item} />)
-            :
-            <p>No items</p>
+            items.map((item, index) =>
+              <PostItem
+                {...item}
+                key={index}
+                className={item.id === selectedItem.id ? 'selected' : ''}
+                onClick={this.onItemClick} />
+            ) : <p>No items</p>
         }
       </div>
     )
